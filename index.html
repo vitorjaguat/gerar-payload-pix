@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- //FONT AWESOME:
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    //FONT AWESOME -->
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de payload PIX</title>
+</head>
+<body>
+    <h1>Gerador de payload PIX</h1>
+    <form id="form" class="form">
+        <div class="field">
+            <label for="chave-pix" id="label" class="label">Chave PIX <span class="red">*</span> </label>
+            <input type="text" id="chave-pix" name="chave-pix" required>
+        </div>
+        <div class="field">
+            <label for="description" id="label" class="label">Descrição</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <div class="field">
+            <label for="name" id="label" class="label">Nome do recebedor <span class="red">*</span> </label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+            <label for="cidade" id="label" class="label">Cidade do recebedor <span class="red">*</span>  </label>
+            <input type="text" id="cidade" name="cidade" required>
+        </div>
+        <div class="field">
+            <label for="text-id" id="label" class="label">Identificação do pagamento</label>
+            <input type="text" id="text-id" name="text-id">
+        </div>
+        <div class="field">
+            <label for="amount" id="label" class="label">Valor</label>
+            <input type="number" id="amount" name="amount" step="any">
+        </div>
+
+        <button>gerar</button>
+        
+        
+        <!-- <textarea name="text" id="text" cols="30" rows="10"></textarea> -->
+
+    </form>
+
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="pix.js"></script>
+    <script type="module" src="pix2.js"></script>
+</body>
+
+</html>
