@@ -42,7 +42,7 @@
   
       return this._getValue(
         this.ID_MERCHANT_ACCOUNT_INFORMATION,
-        gui + key
+        gui + key + description
       );
     }
   

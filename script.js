@@ -19,7 +19,7 @@ btn.addEventListener('click', (e) => {
     let payload, newPayload;
     if(+amount.value > 0) {
         console.log(123)
-        payload = new Pix(chavePix.value, description.value, name.value, city.value, txtId.value, +amount.value);
+        payload = new Pix(chavePix.value, description.value, name.value.toUpperCase(), city.value, txtId.value, +amount.value);
         newPayload = payload.getPayload();
         const payloadEl = document.createElement('div');
         payloadEl.classList.add('payloadEl');
@@ -29,7 +29,7 @@ btn.addEventListener('click', (e) => {
         form.appendChild(payloadEl);
     } else if(!(+amount.value)) {
         console.log(345)
-        payload = new PixNoValue(chavePix.value, description.value, name.value, city.value, txtId.value);
+        payload = new PixNoValue(chavePix.value, description.value, name.value.toUpperCase(), city.value, txtId.value);
         newPayload = payload.getPayload2();
         const payloadEl = document.createElement('div');
         payloadEl.classList.add('payloadEl');
