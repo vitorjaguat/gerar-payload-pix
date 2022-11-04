@@ -10,6 +10,24 @@ const amount = document.getElementById('amount');
 const form = document.getElementById('form');
 const btn = document.querySelector('button');
 
+//COPY BUTTON
+function copy() {
+    const textarea = document.createElement('textarea');
+    if(!document.getElementById('newPayload')) return;
+    const text = document.getElementById('newPayload').innerText;
+    if(!text) return;
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    
+    // alert('Password copied to clipboard!');
+    // shakeResult()
+}
+
+//Gerar payload
+
 btn.addEventListener('click', (e) => {
     e.preventDefault();
     if(document.querySelector('.payloadEl')){
@@ -24,7 +42,20 @@ btn.addEventListener('click', (e) => {
         const payloadEl = document.createElement('div');
         payloadEl.classList.add('payloadEl');
         payloadEl.innerHTML = `
-            <p>${newPayload}</p>
+            <p id="newPayload">${newPayload}</p>
+            <p class="copy-btn" onclick="
+                    const textarea = document.createElement('textarea');
+                    console.log(12345)
+                    const text = document.getElementById('newPayload').innerText;
+                    
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    textarea.remove();
+                    document.querySelector('.copy-btn').innerText = 'Copiado!';
+                    document.querySelector('.copy-btn').style.color = 'red';
+            ">Copiar</p>
         `;
         form.appendChild(payloadEl);
     } else if(!(+amount.value)) {
@@ -34,7 +65,20 @@ btn.addEventListener('click', (e) => {
         const payloadEl = document.createElement('div');
         payloadEl.classList.add('payloadEl');
         payloadEl.innerHTML = `
-            <p>${newPayload}</p>
+            <p id="newPayload">${newPayload}</p>
+            <p class="copy-btn" onclick="
+                    const textarea = document.createElement('textarea');
+                    console.log(12345)
+                    const text = document.getElementById('newPayload').innerText;
+                    
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    textarea.remove();
+                    document.querySelector('.copy-btn').innerText = 'Copiado!';
+                    document.querySelector('.copy-btn').style.color = 'red';
+            ">Copiar</p>
         `;
         form.appendChild(payloadEl);
     }
@@ -47,6 +91,9 @@ btn.addEventListener('click', (e) => {
     
     // console.log(chavePix, description, name, city, txtId, amount);
 })
+
+
+
 
 
 

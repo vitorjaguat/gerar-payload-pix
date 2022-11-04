@@ -62,11 +62,22 @@ button {
 .payloadEl {
     background-color: bisque;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
+    padding-bottom: 10px;
     margin-top: 20px;
     border-radius: 5px;
 }
 
-.payloadEl p {
+.payloadEl #newPayload {
     overflow-wrap: break-word;
+}
+
+.payloadEl .copy-btn {
+    cursor: pointer;
+    float: right;
+}
+
+.payloadEl .copy-btn:hover {
+    color: darkcyan;
+    transform: scale(0.98);
 }
