@@ -16,31 +16,39 @@
     <h1>Gerador de payload PIX</h1>
     <form id="form" class="form">
         <div class="field">
-            <label for="chave-pix" id="label" class="label">Chave PIX <span class="red">*</span> </label>
+            <label for="chave-pix" id="label" class="label">Chave PIX</label>
             <input type="text" id="chave-pix" name="chave-pix" required>
         </div>
         <!-- <small class="red">CPF: apenas números</small>
         <small class="red">Celular: formato +5511999999999</small> -->
         <div class="field">
-            <label for="description" id="label" class="label">Descrição <span class="red">*</span> </label>
+            <label for="description" id="label" class="label">Descrição</label>
             <input type="text" id="description" name="description" required>
         </div>
         <div class="field">
-            <label for="name" id="label" class="label">Nome do recebedor <span class="red">*</span> </label>
+            <label for="name" id="label" class="label">Nome do recebedor</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div class="field">
-            <label for="cidade" id="label" class="label">Cidade do recebedor <span class="red">*</span>  </label>
+            <label for="cidade" id="label" class="label">Cidade do recebedor </label>
             <input type="text" id="cidade" name="cidade" required>
         </div>
         <div class="field">
-            <label for="text-id" id="label" class="label">Identificação do pagamento <span class="red">*</span> </label>
+            <label for="text-id" id="label" class="label">Identificação do pagamento</label>
             <input type="text" id="text-id" name="text-id" required>
         </div>
         <div class="field">
-            <label for="amount" id="label" class="label">Valor</label>
+            <label for="amount" id="label" class="label">Valor (opcional)</label>
             <input type="number" id="amount" name="amount" step="any">
         </div>
+        <small class="red">
+            <b>Chave PIX:</b> e-mail, CPF (apenas números) ou celular (no formato +5511999999999)<br>
+            <b>Descrição:</b> itens pagos ou especificações da transferência<br>
+            <b>Nome do recebedor:</b> não usar acentos ou ç<br>
+            <b>Cidade do recebedor:</b> não usar acentos ou ç<br>
+            <b>Identificação do pagamento:</b> ID para controle do financeiro ou 'ok'<br>
+            <b>Valor:</b> em reais; apenas números
+        </small>
 
         <button>gerar</button>
         
